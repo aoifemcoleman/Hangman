@@ -88,4 +88,16 @@ li {
         font-size: 2vw;
     }
 
+    .spacebar {
+        width: 300px;
+        height: 2.8em;
+        font-size: 1.7vw;
+    }
+    
+    .enter-key {
+        height: 2.8em;
+        font-size: 2vw;
+        padding: 15px;
+    }
+
 }
