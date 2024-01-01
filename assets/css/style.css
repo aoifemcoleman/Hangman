@@ -1,0 +1,19 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Lakki+Reddy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#heading {
+    font-family: "Lacquer", serif;
+    font-size: 10vh;
+    text-align: center;
+    padding-block: 15px;
+    border-bottom: thin ridge #000;
+}
+
+main {
+    background-color: black;
+}

@@ -40,3 +40,4 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 https://favicon.io/favicon-converter/ for Favicon
 Microsoft Paint for Hangman drawings
+Google fonts
