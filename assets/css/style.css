@@ -45,3 +45,25 @@ li {
 #game-area img {
     max-width: 100vw;
 }
+
+/*Guidance and code for keyboard css from Youtube: https://www.youtube.com/watch?v=K7I0SJ86NvE */
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    padding-inline: 0.55em;
+    margin-bottom: 0.8em;
+    margin-right: 2px;
+}
+
+
+/*Larger tablets and laptops in landscape mode*/
+@media screen and (min-width: 768px) {
+    .btn {
+        padding: 15px;
+        font-size: 2vw;
+    }
+}
