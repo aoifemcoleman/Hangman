@@ -54,9 +54,30 @@ li {
 }
 
 .btn {
-    padding-inline: 0.55em;
     margin-bottom: 0.8em;
-    margin-right: 2px;
+    margin-inline: 0.1em;
+    background-color: #ddd;
+    border: none;
+    font-family: sans-serif;
+    width: 1.6em;
+    height: 2.8em;
+}
+
+.enter-key,
+.spacebar {
+    background-color: #ddd;
+    border: none;
+    font-family: sans-serif;
+}
+
+.spacebar {
+    width: 12em;
+    height: 2.8em;
+}
+
+.enter-key {
+    width: 4em;
+    height: 2.8em;
 }
 
 
@@ -66,4 +87,5 @@ li {
         padding: 15px;
         font-size: 2vw;
     }
+
 }
