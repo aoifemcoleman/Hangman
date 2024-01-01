@@ -38,6 +38,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Credits
 
-https://favicon.io/favicon-converter/ for Favicon
+https://favicon.io/favicon-generator/ for Favicon
 Microsoft Paint for Hangman drawings
 Google fonts
