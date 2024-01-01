@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+/* Header */
 #heading {
     font-family: "Lacquer", serif;
     font-size: 10vh;
@@ -14,32 +15,12 @@
     border-bottom: thin ridge #000;
 }
 
-#instructions {
-    font-family: serif;
-    margin-inline: 2em;
-}
-
+/* Main section */
 h2 {
     padding-top: 0.7em;
     padding-bottom: 0.5em;
     font-size: 5vh;
     text-align: center;
-}
-
-p {
-    font-size: 4vh;
-}
-
-ul {
-    margin-bottom: 50px;
-}
-
-li {
-    font-size: 3vh;
-    margin-bottom: 15px;
-    text-align: center;
-    list-style-type: none;
-    padding: 5px;
 }
 
 #game-area img {
@@ -80,7 +61,29 @@ li {
     height: 2.8em;
 }
 
+/* How to play section */
+#instructions {
+    font-family: serif;
+    margin-inline: 2em;
+}
 
+p {
+    font-size: 4vh;
+}
+
+ul {
+    margin-bottom: 50px;
+}
+
+li {
+    font-size: 3vh;
+    margin-bottom: 15px;
+    text-align: center;
+    list-style-type: none;
+    padding: 5px;
+}
+
+/* Media queries */
 /*Larger tablets and laptops in landscape mode*/
 @media screen and (min-width: 768px) {
     .btn {
