@@ -15,24 +15,31 @@
 }
 
 #instructions {
-    text-align: center;
-    font-family: "Lakki+Reddy", serif;
+    font-family: serif;
     margin-inline: 2em;
 }
 
 h2 {
-    padding: 1em;
+    padding-top: 0.7em;
+    padding-bottom: 0.5em;
     font-size: 5vh;
+    text-align: center;
 }
 
 p {
     font-size: 4vh;
 }
 
+ul {
+    margin-bottom: 50px;
+}
+
 li {
     font-size: 3vh;
-    list-style-type: circle;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    list-style-type: none;
+    padding: 5px;
 }
 
 #game-area img {
