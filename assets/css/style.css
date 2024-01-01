@@ -14,6 +14,27 @@
     border-bottom: thin ridge #000;
 }
 
-main {
-    background-color: black;
+#instructions {
+    text-align: center;
+    font-family: "Lakki+Reddy", serif;
+    margin-inline: 2em;
+}
+
+h2 {
+    padding: 1em;
+    font-size: 5vh;
+}
+
+p {
+    font-size: 4vh;
+}
+
+li {
+    font-size: 3vh;
+    list-style-type: circle;
+    margin-bottom: 10px;
+}
+
+#game-area img {
+    max-width: 100vw;
 }
