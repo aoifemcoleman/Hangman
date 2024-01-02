@@ -89,6 +89,7 @@ ul {
     #game-area {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;
     }
 
     #word-guess-area {
