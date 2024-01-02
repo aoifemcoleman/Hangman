@@ -17,7 +17,7 @@
 
 /* Main section */
 h2 {
-    padding-top: 0.7em;
+    padding-top: 0.5em;
     font-size: 5vh;
     text-align: center;
 }
@@ -125,7 +125,7 @@ p {
     #game-area img {
         max-height: 60vh;
        /* width: 50vw;*/
-        margin: 2em;
+        margin-inline: 3em;
     }
 
     #guess-area {
