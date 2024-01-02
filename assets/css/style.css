@@ -27,6 +27,19 @@ h2 {
     max-width: 100vw;
 }
 
+/* Word guess area */
+
+#word-guess-area ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 5vw;
+}
+
+.letter {
+    margin-right: 20px;
+}
+
 /*Guidance and code for keyboard css from Youtube: https://www.youtube.com/watch?v=K7I0SJ86NvE */
 #keyboard {
     display: flex;
@@ -75,7 +88,7 @@ ul {
     margin-bottom: 50px;
 }
 
-li {
+#instructions li {
     font-size: 3vh;
     margin-bottom: 15px;
     text-align: center;
@@ -88,27 +101,32 @@ li {
 @media screen and (min-width: 768px) {
 
     /* Game area */
-    
+
     #game-area {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
+
+    #word-guess-area {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     /* Keyboard */
     .btn {
-        padding: 15px;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
 
     .spacebar {
-        width: 300px;
-        height: 2.8em;
-        font-size: 1.7vw;
+        width: 200px;
+        font-size: 1.3vw;
     }
     
     .enter-key {
         height: 2.8em;
-        font-size: 2vw;
-        padding: 15px;
+        font-size: 1.3vw;
     }
 
 }
