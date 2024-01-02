@@ -55,6 +55,7 @@ h2 {
     font-family: sans-serif;
     width: 1.6em;
     height: 2.8em;
+    font-size: 4vw;
 }
 
 
@@ -83,6 +84,12 @@ ul {
 /* Media queries */
 /*Larger tablets and laptops in landscape mode*/
 @media screen and (min-width: 768px) {
+    
+}
+
+
+/*Most laptops and desktops*/
+@media screen and (min-width: 1024px) {
 
     /* Game area */
 
