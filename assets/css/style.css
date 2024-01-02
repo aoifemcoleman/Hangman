@@ -57,22 +57,6 @@ h2 {
     height: 2.8em;
 }
 
-.enter-key,
-.spacebar {
-    background-color: #ddd;
-    border: none;
-    font-family: sans-serif;
-}
-
-.spacebar {
-    width: 12em;
-    height: 2.8em;
-}
-
-.enter-key {
-    width: 4em;
-    height: 2.8em;
-}
 
 /* How to play section */
 #instructions {
@@ -117,16 +101,6 @@ ul {
     /* Keyboard */
     .btn {
         font-size: 1.5vw;
-    }
-
-    .spacebar {
-        width: 200px;
-        font-size: 1.3vw;
-    }
-    
-    .enter-key {
-        height: 2.8em;
-        font-size: 1.3vw;
     }
 
 }
