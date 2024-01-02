@@ -20,8 +20,14 @@
         <h2>Guess the correct word before you are hanged!</h2>
         <section>
         <div id="game-area">
-            <div>
-                <img src="assets/images/Hangman0.webp" alt="Image of gallows for hangman game">
+            <div id="score-area">
+                <div>
+                    <img src="assets/images/Hangman0.webp" alt="Image of gallows for hangman game">
+                </div>
+                <div id="incorrect-guesses"> Incorrect Guesses:
+                    <!--Setting 0 as a placeholder--> 
+                    <span id="incorrect-count">0</span> / 6</div>
+                </div>
             </div>
             <div id="word-guess-area">
                 <div class="letter-fill-box">
@@ -72,8 +78,6 @@
                     <button class="btn">m</button>
                 </div>
             </div>
-        </div>
-            <div id="score"></div>
         </div>
     </section>
     <section id="instructions">
