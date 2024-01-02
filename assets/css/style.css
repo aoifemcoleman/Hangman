@@ -18,7 +18,6 @@
 /* Main section */
 h2 {
     padding-top: 0.7em;
-    padding-bottom: 0.5em;
     font-size: 5vh;
     text-align: center;
 }
@@ -94,13 +93,6 @@ p {
 /*Larger tablets and laptops in landscape mode*/
 @media screen and (min-width: 768px) {
     
-    #game-area {
-        
-    }
-    
-    #game-area img {
-        max-height: 60vh;
-    }
 }
 
 
@@ -115,11 +107,16 @@ p {
         justify-content: space-between;
     }
 
+    #game-area img {
+        height: 90vh;
+    }
+
     #word-guess-area {
         margin-top: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
     }
 
     /* Keyboard */
@@ -127,4 +124,17 @@ p {
         font-size: 1.5vw;
     }
 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+    #game-area {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #keyboard {
+        padding-block: 20% 10%;
+    }
 }
