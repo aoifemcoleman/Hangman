@@ -69,15 +69,17 @@ h2 {
 /* How to play section */
 #instructions {
     font-family: serif;
-    margin-inline: 2em;
+    background-color: #000;
+    color: #ddd;
+    padding-bottom: 0.3em;
 }
 
 p {
     font-size: 4vh;
 }
 
-ul {
-    margin-bottom: 50px;
+#instructions ul {
+    padding-inline: 2em;
 }
 
 #instructions li {
