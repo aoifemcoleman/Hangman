@@ -29,6 +29,10 @@ h2 {
     margin-block: 1.5em;
 }
 
+#incorrect-guesses {
+    font-size: 1.5em;
+}
+
 /* Word guess area */
 
 #guess-area {
