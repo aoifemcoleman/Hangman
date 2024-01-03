@@ -124,4 +124,4 @@ const wordList = [
 'Water',
 'Wheelchair',
 'Window',   
-]
+];
