@@ -38,6 +38,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2em;
 }
 
 #guess-area ul {
@@ -76,6 +77,17 @@ h2 {
     width: 1.6em;
     height: 2.8em;
     font-size: 4vw;
+}
+
+/* Reset button */
+.reset-btn {
+    font-size: 1em;
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: black;
+    color: #ddd;
+    border-radius: 10%;
+    padding: 1em 2em;
 }
 
 
