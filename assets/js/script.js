@@ -29,3 +29,7 @@ function createLetterSpaces(length) {
     }
 }
 createLetterSpaces(currentWordLength);
+
+function letterClick(clickedLetter) {
+    console.log(`Clicked letter: ${clickedLetter}`)
+}
