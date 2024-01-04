@@ -30,6 +30,32 @@ function createLetterSpaces(length) {
 }
 createLetterSpaces(currentWordLength);
 
+// Check if key pressed is a letter within currentWord
+function checkWord(letter) {
+    // Convert currentWord to an array of letters
+    let currentWordArray = currentWord.split('');
+    // Check if the guessed letter is in the word, assuming letter is not in word first
+    let letterFound = false;
+    for (let i = 0; i < currentWordArray.length; i++) {
+        if (currentWordArray[i] === letter) {
+            let letterSpaces = document.getElementById('letter-spaces');
+            let blankSpaces = letterSpaces.getElementsByClassName('letter');
+            // replace blank space with entered letter
+            blankSpaces[i].textContent = letter;
+            letterFound = true;
+        }
+    }
+    return letterFound;
+ }
+
 function letterClick(clickedLetter) {
     console.log(`Clicked letter: ${clickedLetter}`)
+    // Call checkWord function with clicked letter
+    let letterFound = checkWord(clickedLetter);
+
+    if (letterFound) {
+        console.log('Letter found in the word.');
+    } else {
+        console.log('Letter not found in the word.');
+    }
 }
