@@ -79,6 +79,10 @@ h2 {
     font-size: 4vw;
 }
 
+.btn:hover {
+    background-color: #6D6D6D;
+}
+
 /* Reset button */
 .reset-btn {
     font-size: 1em;
