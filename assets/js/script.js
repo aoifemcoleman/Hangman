@@ -32,8 +32,13 @@ createLetterSpaces(currentWordLength);
 
 // Check if key pressed is a letter within currentWord
 function checkWord(letter) {
-    // Convert currentWord to an array of letters
-    let currentWordArray = currentWord.split('');
+    /**
+     * Convert currentWord to an array of letters
+     * Make case insensitive so lowercase keyboard letters 
+     * will be accepted against uppercase first letters in word list
+     * (https://www.w3schools.com/jsref/jsref_tolowercase.asp)
+     */
+    let currentWordArray = currentWord.toLowerCase().split('');
     // Check if the guessed letter is in the word, assuming letter is not in word first
     let letterFound = false;
     for (let i = 0; i < currentWordArray.length; i++) {
