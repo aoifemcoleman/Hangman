@@ -86,3 +86,7 @@ function winner() {
         alert("Woohoo! You got it right!");
     }
 }
+
+function loser() {
+    alert(`You lost! The correct word was ${currentWord}`);
+}
