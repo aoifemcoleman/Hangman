@@ -1,7 +1,8 @@
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
 let correctLetters = [];
-console.log(usedLetters);
+let maxGuesses = 6;
+let incorrectLetters = [];
 
 // Generating random word from word-list.js using wordList as parameter.
 function chooseWord(wordList) {
@@ -53,7 +54,10 @@ function checkWord(letter) {
             // replace blank space with entered letter
             blankSpaces[i].textContent = letter;
             letterFound = true;
+        } 
         }
+        if (!letterFound) {
+            incorrectLetters.push(letter);
     }
     return letterFound;
  }
@@ -75,6 +79,7 @@ function letterClick(button, clickedLetter) {
     } else {
         button.style.backgroundColor = '#6D6D6D';
         console.log('Letter not found in the word.');
+        loser();
     }
 }
 
@@ -88,5 +93,8 @@ function winner() {
 }
 
 function loser() {
-    alert(`You lost! The correct word was ${currentWord}`);
+    // idea for code modified from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
+    if (incorrectLetters.length >= maxGuesses) {
+        alert(`You lost! :( The correct word was ${currentWord}.`);
+    }
 }
