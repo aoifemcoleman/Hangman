@@ -1,5 +1,6 @@
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
+let correctLetters = [];
 console.log(usedLetters);
 
 // Generating random word from word-list.js using wordList as parameter.
@@ -69,8 +70,19 @@ function letterClick(button, clickedLetter) {
        button.classList.add('clicked');
        // Pushing used letters to global variable array
        usedLetters.push(clickedLetter)
+       // Running winner function
+       winner();
     } else {
         button.style.backgroundColor = '#6D6D6D';
         console.log('Letter not found in the word.');
+    }
+}
+
+function winner() {
+    let correctLetters = currentWord.toLowerCase().split('');
+    // learned about every() method here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
+    let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)) 
+    if (allCorrect) {
+        alert("Woohoo! You got it right!");
     }
 }
