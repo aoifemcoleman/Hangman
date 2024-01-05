@@ -89,6 +89,7 @@ function winner() {
     let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)) 
     if (allCorrect) {
         alert("Woohoo! You got it right!");
+        resetGame();
     }
 }
 
@@ -96,5 +97,24 @@ function loser() {
     // idea for code modified from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
     if (incorrectLetters.length >= maxGuesses) {
         alert(`You lost! :( The correct word was ${currentWord}.`);
+        resetGame();
     }
 }
+
+/**
+ * empty global variable arrays, generate new random word, wordlength and 
+ * create relevant amount of letter spaces.
+ * Return keyboard buttons to original colour
+ */
+function resetGame() {
+    usedLetters = [];
+    incorrectLetters = [];
+    currentWord = chooseWord(wordList);
+    currentWordLength = wordLength(currentWord);
+    createLetterSpaces(currentWordLength);
+
+    let keyboardButtons = document.getElementsByClassName('btn');
+    for (i=0; i < keyboardButtons.length; i++) {
+        keyboardButtons[i].style.backgroundColor = '#ddd';
+    }
+ }
