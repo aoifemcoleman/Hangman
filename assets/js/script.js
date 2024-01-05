@@ -80,7 +80,7 @@ function letterClick(button, clickedLetter) {
         button.style.backgroundColor = '#6D6D6D';
         console.log('Letter not found in the word.');
         loser();
-    }
+    } updateGuessbox();
 }
 
 function winner() {
@@ -117,4 +117,12 @@ function resetGame() {
     for (i=0; i < keyboardButtons.length; i++) {
         keyboardButtons[i].style.backgroundColor = '#ddd';
     }
+ }
+
+ function updateGuessbox() {
+    let score = document.getElementById('incorrect-count');
+    score.textContent = incorrectLetters.length;
+   //if (!letterFound) {
+        
+  //  }
  }
