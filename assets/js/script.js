@@ -1,5 +1,6 @@
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
+console.log(usedLetters);
 
 // Generating random word from word-list.js using wordList as parameter.
 function chooseWord(wordList) {
@@ -56,23 +57,20 @@ function checkWord(letter) {
     return letterFound;
  }
 
-//function letterClick(clickedLetter) {
-    //console.log(`Clicked letter: ${clickedLetter}`)
-    // Call checkWord function with clicked letter
-  //  let letterFound = checkWord(clickedLetter);
+function letterClick(button, clickedLetter) {
+    console.log(`Clicked letter: ${clickedLetter}`)
+    //Call checkWord function with clicked letter
+    let letterFound = checkWord(clickedLetter);
 
-   // if (letterFound) {
-       // this.style.color = '#6D6D6D';
-       // console.log('Letter found in the word.');
-      //  this.classList.add('clicked');
-       // usedLetters.push(this.className)
-   // } else {
-  //      console.log('Letter not found in the word.');
-   // }
-//}
-
-// let button = document.getElementsByClassName('btn');
-// function handleBtnClick (event) {
-   // console.log(`${button} was clicked!`)
-  //  button.addEventListener('click', );
-// }
+    if (letterFound) {
+       button.style.backgroundColor = '#6D6D6D';
+       console.log('Letter found in the word.');
+       // Adding classList so further actions can be taken with clicked buttons later
+       button.classList.add('clicked');
+       // Pushing used letters to global variable array
+       usedLetters.push(clickedLetter)
+    } else {
+        button.style.backgroundColor = '#6D6D6D';
+        console.log('Letter not found in the word.');
+    }
+}
