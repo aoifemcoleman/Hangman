@@ -59,6 +59,7 @@ function letterClick(clickedLetter) {
     let letterFound = checkWord(clickedLetter);
 
     if (letterFound) {
+        this.style.color = '#6D6D6D';
         console.log('Letter found in the word.');
     } else {
         console.log('Letter not found in the word.');
