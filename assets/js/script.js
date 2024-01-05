@@ -79,8 +79,10 @@ function letterClick(button, clickedLetter) {
     } else {
         button.style.backgroundColor = '#6D6D6D';
         console.log('Letter not found in the word.');
+        updateImage();
+        updateGuessbox();
         loser();
-    } updateGuessbox();
+    } 
 }
 
 function winner() {
@@ -125,4 +127,12 @@ function resetGame() {
    //if (!letterFound) {
         
   //  }
+ }
+
+ function updateImage() {
+    console.log("Updating image...")
+    let hangmanImage = document.getElementById('hangman-image');
+    let incorrectGuesses = incorrectLetters.length;
+    let imagePath = `../assets/images/Hangman${incorrectGuesses}.webp`;
+    hangmanImage.src = imagePath;
  }
