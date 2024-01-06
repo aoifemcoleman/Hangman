@@ -133,6 +133,6 @@ function resetGame() {
     console.log("Updating image...")
     let hangmanImage = document.getElementById('hangman-image');
     let incorrectGuesses = incorrectLetters.length;
-    let imagePath = `../assets/images/Hangman${incorrectGuesses}.webp`;
+    let imagePath = `assets/images/Hangman${incorrectGuesses}.webp`;
     hangmanImage.src = imagePath;
  }
