@@ -4,6 +4,11 @@ let correctLetters = [];
 let maxGuesses = 6;
 let incorrectLetters = [];
 
+ // Setting all buttons to enabled, and then disabling once used. Technique learned from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
+ document.querySelectorAll('.btn').forEach(button => {
+    button.disabled = false;
+});
+
 // Generating random word from word-list.js using wordList as parameter.
 function chooseWord(wordList) {
     let randomWord = wordList[Math.floor(Math.random() * wordList.length)];
@@ -69,15 +74,17 @@ function letterClick(button, clickedLetter) {
 
     if (letterFound) {
        button.style.backgroundColor = '#6D6D6D';
+       button.disabled = true;
        console.log('Letter found in the word.');
        // Adding classList so further actions can be taken with clicked buttons later
        button.classList.add('clicked');
        // Pushing used letters to global variable array
        usedLetters.push(clickedLetter)
        // Running winner function
-       winner();
+       winner()
     } else {
         button.style.backgroundColor = '#6D6D6D';
+        button.disabled = true;
         console.log('Letter not found in the word.');
         updateImage();
         updateGuessbox();
@@ -118,6 +125,9 @@ function resetGame() {
     currentWord = chooseWord(wordList);
     currentWordLength = wordLength(currentWord);
     createLetterSpaces(currentWordLength);
+    document.querySelectorAll('.btn').forEach(button => {
+        button.disabled = false;
+    });
 
     let keyboardButtons = document.getElementsByClassName('btn');
     for (i=0; i < keyboardButtons.length; i++) {
@@ -131,9 +141,6 @@ function resetGame() {
  function updateGuessbox() {
     let score = document.getElementById('incorrect-count');
     score.textContent = incorrectLetters.length;
-   //if (!letterFound) {
-        
-  //  }
  }
 
  function updateImage() {
