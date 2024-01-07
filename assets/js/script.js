@@ -98,10 +98,14 @@ function winner() {
 function loser() {
     // idea for code modified from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
     if (incorrectLetters.length >= maxGuesses) {
-        alert(`You lost! :( The correct word was ${currentWord}.`);
-        resetGame();
+        updateImage();
+        //learned about method here, to allow image time to update: https://forum.freecodecamp.org/t/how-to-make-js-wait-until-dom-is-updated/122067
+        setTimeout(function() {
+            alert(`You lost! :( The correct word was ${currentWord}.`);
+            resetGame();
+        }, 1000); // Adjust the delay time as needed
     }
-}
+    }
 
 /**
  * empty global variable arrays, generate new random word, wordlength and 
