@@ -119,6 +119,12 @@ function loser() {
  * create relevant amount of letter spaces.
  * Return keyboard buttons to original colour
  */
+
+let resetButton = document.querySelector('.reset-btn');
+resetButton.addEventListener('click', function() {
+    resetGame();
+});
+
 function resetGame() {
     usedLetters = [];
     incorrectLetters = [];
