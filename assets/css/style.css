@@ -22,6 +22,12 @@ h2 {
     text-align: center;
 }
 
+/* #game-area {
+    display: flex;
+    flex-direction: column-reverse;
+
+} */
+
 #game-area img {
     max-width: 80vw;
     max-height: 50vh;
@@ -85,13 +91,13 @@ h2 {
 
 /* Reset button */
 .reset-btn {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 700;
     font-family: sans-serif;
     background-color: black;
     color: #ddd;
     border-radius: 10%;
-    padding: 1em 2em;
+    padding: 1em 1em;
 }
 
 
