@@ -119,6 +119,9 @@ function resetGame() {
     for (i=0; i < keyboardButtons.length; i++) {
         keyboardButtons[i].style.backgroundColor = '#ddd';
     }
+    let hangmanImage = document.getElementById('hangman-image');
+    let imagePath = `assets/images/Hangman0.webp`;
+    hangmanImage.src = imagePath;
  }
 
  function updateGuessbox() {
