@@ -98,7 +98,7 @@ function winner() {
     let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)) 
     if (allCorrect) {
         alert("Woohoo! You got it right!");
-        resetGame();
+        // resetGame();
     }
 }
 
@@ -109,7 +109,7 @@ function loser() {
         //learned about method here, to allow image time to update: https://forum.freecodecamp.org/t/how-to-make-js-wait-until-dom-is-updated/122067
         setTimeout(function() {
             alert(`You lost! :( The correct word was ${currentWord}.`);
-            resetGame();
+            // resetGame();
         }, 1000); // Adjust the delay time as needed
     }
     }
