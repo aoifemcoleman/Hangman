@@ -3,6 +3,8 @@ let usedLetters = [];
 let correctLetters = [];
 let maxGuesses = 6;
 let incorrectLetters = [];
+// Flag to check whether game is over or not - idea found here: https://stackoverflow.com/questions/33722268/disabling-click-counter-function-after-timer-runs-down-to-zero-and-alerts-game
+let gameOver = false;
 
  // Setting all buttons to enabled, and then disabling once used. Technique learned from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
  document.querySelectorAll('.btn').forEach(button => {
@@ -14,7 +16,6 @@ function chooseWord(wordList) {
     let randomWord = wordList[Math.floor(Math.random() * wordList.length)];
     return randomWord;
 }
-// Print currentWord to console
 let currentWord = chooseWord(wordList);
 console.log(currentWord);
 
@@ -22,7 +23,6 @@ console.log(currentWord);
 function wordLength(word) {
     return word.length;
 }
-// Print length of currentWord to console
 let currentWordLength = wordLength(currentWord);
 console.log(`${currentWordLength}`);
 
@@ -69,6 +69,7 @@ function checkWord(letter) {
 
 function letterClick(button, clickedLetter) {
     console.log(`Clicked letter: ${clickedLetter}`)
+    if (!gameOver) {
     //Call checkWord function with clicked letter
     let letterFound = checkWord(clickedLetter);
 
@@ -89,6 +90,7 @@ function letterClick(button, clickedLetter) {
         loser();
     } 
 }
+}
 
 function winner() {
     let correctLetters = currentWord.toLowerCase().split('');
@@ -96,7 +98,7 @@ function winner() {
     let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)) 
     if (allCorrect) {
         alert("Woohoo! You got it right!");
-        // resetGame();
+        gameOver = true;
     }
 }
 
@@ -107,8 +109,8 @@ function loser() {
         //learned about method here, to allow image time to update: https://forum.freecodecamp.org/t/how-to-make-js-wait-until-dom-is-updated/122067
         setTimeout(function() {
             alert(`You lost! :( The correct word was ${currentWord}.`);
-            // resetGame();
-        }, 1000); // Adjust the delay time as needed
+        }, 1000);
+        gameOver = true;
     }
     }
 
@@ -118,6 +120,7 @@ function loser() {
  * Return keyboard buttons to original colour
  */
 
+// Event listener for reset
 let resetButton = document.querySelector('.reset-btn');
 resetButton.addEventListener('click', function() {
     resetGame();
