@@ -89,17 +89,6 @@ h2 {
     background-color: #6D6D6D;
 }
 
-/* Reset button */
-.reset-btn, .close {
-    font-size: 0.8em;
-    font-weight: 700;
-    font-family: sans-serif;
-    background-color: black;
-    color: #ddd;
-    border-radius: 10%;
-    padding: 1em 1em;
-}
-
 /* Modal */
 /* https://www.w3schools.com/howto/howto_css_modals.asp */
 #modal {
@@ -115,12 +104,37 @@ h2 {
 
  .modal-content {
     background-color: #ddd;
+    position: fixed;
     margin: 15% auto;
     width: 100%;
     height: 50%;
     text-align: center;
     padding-top: 100px;
  } 
+
+ /* Reset button */
+ .reset-btn, .close {
+    font-size: 0.8em;
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: black;
+    color: #ddd;
+    border-radius: 10%;
+    padding: 1em 1em;
+    position: absolute;
+    bottom: 30px;
+    width: 10em;
+}
+
+.reset-btn {
+   left: 70%;
+   transform: translateX(-50%);
+}
+
+.close {
+   right: 60%;
+   transform: translateX(20%);
+}
 
 /* How to play section */
 #instructions {
