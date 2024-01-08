@@ -76,11 +76,9 @@ function letterClick(button, clickedLetter) {
        button.style.backgroundColor = '#6D6D6D';
        button.disabled = true;
        console.log('Letter found in the word.');
-       // Adding classList so further actions can be taken with clicked buttons later
-       button.classList.add('clicked');
        // Pushing used letters to global variable array
        usedLetters.push(clickedLetter)
-       // Running winner function
+       // Calling winner function
        winner()
     } else {
         button.style.backgroundColor = '#6D6D6D';
@@ -142,6 +140,7 @@ function resetGame() {
     let hangmanImage = document.getElementById('hangman-image');
     let imagePath = `assets/images/Hangman0.webp`;
     hangmanImage.src = imagePath;
+    updateGuessbox();
  }
 
  function updateGuessbox() {
