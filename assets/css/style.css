@@ -113,7 +113,7 @@ h2 {
  } 
 
  /* Reset button */
- .reset-btn, .close {
+ .reset-btn {
     font-size: 0.8em;
     font-weight: 700;
     font-family: sans-serif;
@@ -121,19 +121,6 @@ h2 {
     color: #ddd;
     border-radius: 10%;
     padding: 1em 1em;
-    position: absolute;
-    bottom: 30px;
-    width: 10em;
-}
-
-.reset-btn {
-   left: 70%;
-   transform: translateX(-50%);
-}
-
-.close {
-   right: 60%;
-   transform: translateX(20%);
 }
 
 /* How to play section */
@@ -165,7 +152,6 @@ p {
 @media screen and (min-width: 768px) {
     
 }
-
 
 /*Most laptops and desktops*/
 @media screen and (min-width: 1024px) {
