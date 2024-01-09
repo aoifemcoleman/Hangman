@@ -131,11 +131,15 @@ resetButton.addEventListener('click', function() {
 });
 
 function resetGame() {
+    gameOver = false;
     usedLetters = [];
     incorrectLetters = [];
-    currentWord = chooseWord(wordList);
+    currentWordObject = chooseWord(wordList);
+    currentWord = currentWordObject.word;
+    currentHint = currentWordObject.hint;
     currentWordLength = wordLength(currentWord);
     createLetterSpaces(currentWordLength);
+    // document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
     document.querySelectorAll('.btn').forEach(button => {
         button.disabled = false;
     });

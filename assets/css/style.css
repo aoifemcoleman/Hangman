@@ -56,6 +56,10 @@ h2 {
     margin-top: 2em;
 }
 
+#hint {
+    padding-top: 2em;
+}
+
 .letter {
     margin-right: 20px;
 }
