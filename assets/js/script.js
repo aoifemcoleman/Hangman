@@ -22,6 +22,7 @@ let currentHint = currentWordObject.hint;
 document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
 console.log(currentWord);
 console.log(currentWordObject);
+// displayHint();
 
 // Check length of currentWord
 function wordLength(word) {
@@ -139,7 +140,7 @@ function resetGame() {
     currentHint = currentWordObject.hint;
     currentWordLength = wordLength(currentWord);
     createLetterSpaces(currentWordLength);
-    // document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
+    document.getElementById('hint').textContent = '';
     document.querySelectorAll('.btn').forEach(button => {
         button.disabled = false;
     });
@@ -166,3 +167,10 @@ function resetGame() {
     let imagePath = `assets/images/Hangman${incorrectGuesses}.webp`;
     hangmanImage.src = imagePath;
  }
+
+function displayHint() {
+        let hintElement = document.getElementById('hint');
+        hintElement.style.display = 'block';
+        hintElement.textContent = `Hint: ${currentHint}`;
+}
+    document.getElementById('showHintButton').addEventListener('click', displayHint);

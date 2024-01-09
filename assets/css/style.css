@@ -57,6 +57,7 @@ h2 {
 }
 
 #hint {
+    display: none;
     padding-top: 2em;
 }
 
