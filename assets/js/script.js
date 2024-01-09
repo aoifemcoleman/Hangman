@@ -16,8 +16,12 @@ function chooseWord(wordList) {
     let randomWord = wordList[Math.floor(Math.random() * wordList.length)];
     return randomWord;
 }
-let currentWord = chooseWord(wordList);
+let currentWordObject = chooseWord(wordList);
+let currentWord = currentWordObject.word;
+let currentHint = currentWordObject.hint;
+document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
 console.log(currentWord);
+console.log(currentWordObject);
 
 // Check length of currentWord
 function wordLength(word) {
