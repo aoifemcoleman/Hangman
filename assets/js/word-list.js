@@ -127,55 +127,106 @@ const wordList = [
     {word : 'Mosquito',
     hint: 'Insect that sucks blood.'
     },
-// 'Mouth',
-// 'Necklace',
-// 'Needle',
-// 'Onion',
-// 'Parachute',
-// 'Passport',
-// 'Pepper',
-// 'Perfume',
-// 'Pillow',
-// 'Plane',
-// 'Planet',
-// 'Pocket',
-// 'Potato',
-// 'Printer',
-// 'Pyramid',
-// 'Rainbow',
-// 'Restaurant',
-// 'Robot',
-// 'Rocket',
-// 'Sandwich',
-// 'Satellite',
-// 'School',
-// 'Shower',
-// 'Signature',
-// 'Skeleton',
-// 'Snail',
-// 'Sphere',
-// 'Square',
-// 'Staircase',
-// 'Stomach',
-// 'Sunglasses',
-// 'Sword',
-// 'Table',
-// 'Teeth',
-// 'Telescope',
-// 'Television',
-// 'Thermometer',
-// 'Tiger',
-// 'Tongue',
-// 'Torch',
-// 'Train',
-// 'Treadmill',
-// 'Triangle',
-// 'Tunnel',
-// 'Typewriter',
-// 'Umbrella',
-// 'Vacuum',
-// 'Vampire',
-// 'Vulture',
-// 'Water',
-// 'Wheelchair',
+    {word: 'Mouth',
+    hint: 'Body part used for eating and speaking.'
+    },
+    {word: 'Necklace',
+    hint: 'Piece of jewelry.'
+    },
+    {word: 'Needle',
+    hint: 'Used for sewing or drawing blood.'
+    },
+    {word: 'Onion',
+    hint: 'Food that produces tears.'
+    },
+    {word: 'Parachute',
+    hint: 'Fabric canopy used to descend slowly through air.'
+    },
+    {word: 'Passport',
+    hint: 'Travel identification.'
+    },
+    {word: 'Pepper',
+    hint: 'Often combined with salt.'
+    },
+    {word: 'Pillow',
+    hint: 'Used on a bed.'
+    },
+    {word: 'Planet',
+    hint: 'Earth, Mars, Venus...'
+    },
+    {word: 'Pocket',
+    hint: 'Hole in clothing used for carrying items.'
+    },
+    {word: 'Potato',
+    hint: 'Root vegetable.'
+    },
+    {word: 'Pyramid',
+    hint: 'Sand constructions, famous in Egypt.'
+    },
+    {word: 'Rainbox',
+    hint: 'Colour illusion caused by rain.'
+    },
+    {word: 'Restaurant',
+    hint: 'Commercial place to eat'
+    },
+    {word: 'Sandwich',
+    hint: 'Two pieces of bread with fillings.'
+    },
+    {word: 'Signature',
+    hint: 'How one writes their name.'
+    },
+    {word: 'Skeleton',
+    hint: 'A collection of bones'
+    },
+    {word: 'Snail',
+    hint: 'Lives in a shell.'
+    },
+    {word: 'Sphere',
+    hint: '3D circle.'
+    },
+    {word: 'Square',
+    hint: '4-sided shape'
+    },
+    {word: 'Stomach',
+    hint: 'Bodily organ.'
+    },
+    {word: 'Sunglasses',
+    hint: 'Protects your eyes.'
+    },
+    {word: 'Sword',
+    hint: 'Medieval weapon.'
+    },
+    {word: 'Table',
+    hint: 'Object used for eating.'
+    },
+    {word: 'Teeth',
+    hint: 'Used for chewing.'
+    },
+    {word: 'Television',
+    hint: 'Household screen'
+    },
+    {word: 'Thermometer',
+    hint: 'To check temperature.'
+    },
+    {word: 'Tiger',
+    hint: 'Large Asian striped cat.'
+    },
+    {word: 'Torch',
+    hint: 'Portable battery-operated object that shines powerful beam in darkness.'
+    },
+    {word: 'Train',
+    hint: 'Mostly long-distance transport vehicle.'
+    },
+    {word: 'Treadmill',
+    hint: 'Fitness machine.'
+    },
+    {word: 'Umbrella',
+    hint: 'Used in rain.'
+    },
+    {word: 'Vampire',
+    hint: 'Mythical fanged creature.'
+    },
+    {word: 'Water',
+    hint: 'H2O'
+    },
 ];
