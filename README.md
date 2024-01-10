@@ -14,6 +14,18 @@ As a player, I want to:
 ### Accessibility
 ![Lighthouse accessibility score](assets/images/accessibility-score.webp)
 ### Validator testing
+HTML:
+One issue was identified when passed through the official [W3C validator](https://validator.w3.org/).
+
+The index.html had an empty heading which flagged a warning message. Although this was due to the text content being created dynamically by javascript, a placeholder was entered into the heading and when passed through the validator again, it returned no issues.
+
+CSS: 
+
+The style.css file was passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator) and returned no issues.
+
+JS:
+Several issues were initially identified when the script.js file was passed through the official [Jshint validator](https://jshint.com/), which were due to it not being declared that the js file was operating with ES6. A comment was added to the js file to advise that esversion 6 is being used, which removed the majority of issues.
+
 ### Unfixed bugs
 ## Deployment
 

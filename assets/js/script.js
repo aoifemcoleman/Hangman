@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
 let maxGuesses = 6;
