@@ -73,7 +73,7 @@ function checkWord(letter) {
  }
 
 function letterClick(button, clickedLetter) {
-    console.log(`Clicked letter: ${clickedLetter}`)
+    console.log(`Clicked letter: ${clickedLetter}`);
     if (!gameOver) {
     //Call checkWord function with clicked letter
     let letterFound = checkWord(clickedLetter);
@@ -83,9 +83,9 @@ function letterClick(button, clickedLetter) {
        button.disabled = true;
        console.log('Letter found in the word.');
        // Pushing used letters to global variable array
-       usedLetters.push(clickedLetter)
+       usedLetters.push(clickedLetter);
        // Calling winner function
-       winner()
+       winner();
     } else {
         button.style.backgroundColor = '#6D6D6D';
         button.disabled = true;
@@ -100,7 +100,7 @@ function letterClick(button, clickedLetter) {
 function winner() {
     let correctLetters = currentWord.toLowerCase().split('');
     // learned about every() method here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
-    let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)) 
+    let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)); 
     if (allCorrect) {
         alert("Woohoo! You got it right!");
         gameOver = true;
@@ -146,7 +146,7 @@ function resetGame() {
     });
 
     let keyboardButtons = document.getElementsByClassName('btn');
-    for (i=0; i < keyboardButtons.length; i++) {
+    for (let i=0; i < keyboardButtons.length; i++) {
         keyboardButtons[i].style.backgroundColor = '#ddd';
     }
     let hangmanImage = document.getElementById('hangman-image');
@@ -161,7 +161,7 @@ function resetGame() {
  }
 
  function updateImage() {
-    console.log("Updating image...")
+    console.log("Updating image...");
     let hangmanImage = document.getElementById('hangman-image');
     let incorrectGuesses = incorrectLetters.length;
     let imagePath = `assets/images/Hangman${incorrectGuesses}.webp`;

@@ -1,5 +1,13 @@
 # Hangman
-
+## Purpose
+## Features
+### Existing Features
+### Features left to implement
+## Testing
+### Accessibility
+### Validator testing
+### Unfixed bugs
+## Deployment
 
 ## Credits
 
