@@ -1,5 +1,8 @@
 // List of words obtained and modified from here: https://members.optusnet.com.au/~charles57/Creative/Techniques/random_words.htm
-// Idea for word and hint taken from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
+// Idea for word and hint modified from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
+
+/* jshint esversion: 6 */
+
 const wordList = [
     {word: 'Adult',
     hint: 'A person over 18 years old.'

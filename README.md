@@ -14,17 +14,26 @@ As a player, I want to:
 ### Accessibility
 ![Lighthouse accessibility score](assets/images/accessibility-score.webp)
 ### Validator testing
-HTML:
+#### HTML:
 One issue was identified when passed through the official [W3C validator](https://validator.w3.org/).
 
 The index.html had an empty heading which flagged a warning message. Although this was due to the text content being created dynamically by javascript, a placeholder was entered into the heading and when passed through the validator again, it returned no issues.
 
-CSS: 
+#### CSS: 
 
 The style.css file was passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/validator) and returned no issues.
 
-JS:
+#### JS:
+
+##### script.js:
+
 Several issues were initially identified when the script.js file was passed through the official [Jshint validator](https://jshint.com/), which were due to it not being declared that the js file was operating with ES6. A comment was added to the js file to advise that esversion 6 is being used, which removed the majority of issues.
+
+##### word-list.js:
+
+The same issue relating to esversion 6 appeared when the word-list.js file was passed through the validator. As with the script.js file, a comment was added which resolved this issue. 
+
+An issue also appeared showing wordList as being an unused variable. However, as this is due to the validator not having access to the related script.js file in unison, where this variable is used, no action was taken.
 
 ### Unfixed bugs
 ## Deployment
