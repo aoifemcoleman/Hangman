@@ -52,13 +52,24 @@ h2 {
     display: flex;
     flex-direction: row;
     font-size: 5vw;
-    margin-bottom: 2em;
     margin-top: 2em;
 }
 
 #hint {
     display: none;
     padding-top: 2em;
+}
+
+#showHintButton {
+    font-size: 1em;
+    margin-block: 1em;
+    font-size: 0.8em;
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: black;
+    color: #ddd;
+    border-radius: 10%;
+    padding: 1em 1em;
 }
 
 .letter {
