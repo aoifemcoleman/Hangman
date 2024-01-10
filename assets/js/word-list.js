@@ -55,58 +55,84 @@ const wordList = [
     {word: 'Chocolate',
     hint: 'Comes in milk, dark or white.'
     },
-    {word: '',
-    hint: ''
+    {word: 'Church',
+    hint: 'A holy place.'
     },
-    {word: '',
-    hint: ''
+    {word: 'Circle',
+    hint: 'A shape.'
     },
-// 'Church',
-// 'Circle',
-// 'Circus',
-// 'Clock',
-// 'Clown',
-// 'Coffee',
-// 'Computer',
-// 'Crystal',
-// 'Cycle',
-// 'Desk',
-// 'Diamond',
-// 'Dress',
-// 'Earth',
-// 'Electricity',
-// 'Elephant',
-// 'Family',
-// 'Feather',
-// 'Festival',
-// 'Finger',
-// 'Flower',
-// 'Fruit',
-// 'Fungus',
-// 'Garden',
-// 'Grapes',
-// 'Guitar',
-// 'Hammer',
-// 'Horoscope',
-// 'Horse',
-// 'Insect',   
-// 'Kaleidoscope',
-// 'Kitchen',
-// 'Library',
-// 'Liquid',
-// 'Magnet',
-// 'Meteor',
-// 'Microscope',
-// 'Milkshake',
-// 'Monster',
-// 'Mosquito',
+    {word : 'Clocke',
+    hint: 'Used for time-telling.'
+    },
+    {word : 'Clown',
+    hint: 'Traditionally seen at a circus.'
+    },
+    {word : 'Coffee',
+    hint: 'A hot non-alcoholic beverage.'
+    },
+    {word : 'Diamond',
+    hint: 'A precious stone.'
+    },
+    {word : 'Dress',
+    hint: 'A piece of clothing.'
+    },
+    {word : 'Earth',
+    hint: 'A planet.'
+    },
+    {word : 'Electricity',
+    hint: 'A form of energy.'
+    },
+    {word : 'Elephant',
+    hint: 'Large mammal found in Africa and South-East Asia.'
+    },
+    {word : 'Feather',
+    hint: 'A bird has many of these.'
+    },
+    {word : 'Finger',
+    hint: 'You have 10 of them.'
+    },
+    {word : 'Flower',
+    hint: 'Pretty plant, often gifted.'
+    },
+    {word : 'Fruit',
+    hint: 'A food category.'
+    },
+    {word : 'Guitar',
+    hint: 'A musical instrument.'
+    },
+    {word : 'Hammer',
+    hint: 'Household tool.'
+    },
+    {word : 'Horoscope',
+    hint: 'Virgo, Libra, Scorpio...'
+    },
+    {word : 'Kaleidoscope',
+    hint: 'A tube with many different patterns caused by multiple mirrors and colours within'
+    },  
+    {word : 'Kitchen',
+    hint: 'Place for cooking.'
+    },
+    {word : 'Library',
+    hint: 'One can borrow books from here.'
+    },
+    {word : 'Meteor',
+    hint: 'Streak of light in the sky.'
+    },
+    {word : 'Microscope',
+    hint: 'Used to view miniscule objects or matter.'
+    },
+    {word : 'Monster',
+    hint: 'Scary imaginary creature.'
+    },
+    {word : 'Mosquito',
+    hint: 'Insect that sucks blood.'
+    },
 // 'Mouth',
 // 'Necklace',
 // 'Needle',
 // 'Onion',
 // 'Parachute',
 // 'Passport',
-// 'Pebble',
 // 'Pepper',
 // 'Perfume',
 // 'Pillow',
@@ -116,9 +142,7 @@ const wordList = [
 // 'Potato',
 // 'Printer',
 // 'Pyramid',
-// 'Radar',
 // 'Rainbow',
-// 'Record',
 // 'Restaurant',
 // 'Robot',
 // 'Rocket',
@@ -129,9 +153,6 @@ const wordList = [
 // 'Signature',
 // 'Skeleton',
 // 'Snail',
-// 'Software',
-// 'Solid',
-// 'Spectrum',
 // 'Sphere',
 // 'Square',
 // 'Staircase',
@@ -144,7 +165,6 @@ const wordList = [
 // 'Television',
 // 'Thermometer',
 // 'Tiger',
-// 'Toilet',
 // 'Tongue',
 // 'Torch',
 // 'Train',
@@ -158,5 +178,4 @@ const wordList = [
 // 'Vulture',
 // 'Water',
 // 'Wheelchair',
-// 'Window',   
 ];
