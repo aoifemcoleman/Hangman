@@ -1,6 +1,5 @@
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
-let correctLetters = [];
 let maxGuesses = 6;
 let incorrectLetters = [];
 // Flag to check whether game is over or not - idea found here: https://stackoverflow.com/questions/33722268/disabling-click-counter-function-after-timer-runs-down-to-zero-and-alerts-game
