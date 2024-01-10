@@ -9,6 +9,7 @@ The purpose of this website is to provide an easy-to-use digital version of the 
 ### Features left to implement
 ## Testing
 ### Accessibility
+![Lighthouse accessibility score](assets/images/accessibility-score.webp)
 ### Validator testing
 ### Unfixed bugs
 ## Deployment
