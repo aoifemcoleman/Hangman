@@ -2,6 +2,9 @@
 ![Screenshot of website responsivity, taken from https://ui.dev/amiresponsive](assets/images/responsivity.webp)
 ## Purpose
 The purpose of this website is to provide an easy-to-use digital version of the traditional game of Hangman, available on-the-go and requiring no further players or materials.
+### User Stories
+As a player, I want to:
+- [perform some task] so that I can [achieve some goal]".
 
 [View the live deployed website here](https://aoifemcoleman.github.io/Hangman/)
 ## Features

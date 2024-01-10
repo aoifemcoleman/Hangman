@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,85 +10,99 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <!--Link to style.css-->
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Hangman</title>
 </head>
+
 <body>
     <header>
         <h1 id="heading">Hangman</h1>
     </header>
     <main>
+        <!--Introducing game concept-->
         <h2>Guess the correct word before you are hanged!</h2>
+        <!--Game area section-->
         <section>
-        <div id="game-area">
-            <div id="score-area">
-                <div>
-                    <img id="hangman-image" src="assets/images/Hangman0.webp" alt="Image of gallows for hangman game">
+            <div id="game-area">
+                <div id="score-area">
+                    <div>
+                        <img id="hangman-image" src="assets/images/Hangman0.webp"
+                            alt="Image of gallows for hangman game">
+                    </div>
+                    <!--Used guesses counter-->
+                    <div id="incorrect-guesses">Incorrect Guesses:
+                        <!--Setting 0 as a placeholder-->
+                        <span id="incorrect-count">0</span> / 6
+                    </div>
                 </div>
-                <div id="incorrect-guesses">Incorrect Guesses:
-                    <!--Setting 0 as a placeholder--> 
-                    <span id="incorrect-count">0</span> / 6
+                <!--Guess Area-->
+                <div id="guess-area">
+                    <div id="word-hint">
+                        <!--List will be created by javascript within script.js file-->
+                        <ul id="letter-spaces"></ul>
+                        <!--Using x as placeholder - text will be entered dynamically through displayHint function in script.js-->
+                        <h3 id="hint">x</h3>
+                        <button id="showHintButton">Get hint!</button>
+                    </div>
+                    <!--Virtual keyboard with on-click feature-->
+                    <div id="keyboard">
+                        <div class="keyboard-row">
+                            <button class="btn" onclick="letterClick(this, 'q')">q</button>
+                            <button class="btn" onclick="letterClick(this, 'w')">w</button>
+                            <button class="btn" onclick="letterClick(this, 'e')">e</button>
+                            <button class="btn" onclick="letterClick(this, 'r')">r</button>
+                            <button class="btn" onclick="letterClick(this, 't')">t</button>
+                            <button class="btn" onclick="letterClick(this, 'y')">y</button>
+                            <button class="btn" onclick="letterClick(this, 'u')">u</button>
+                            <button class="btn" onclick="letterClick(this, 'i')">i</button>
+                            <button class="btn" onclick="letterClick(this, 'o')">o</button>
+                            <button class="btn" onclick="letterClick(this, 'p')">p</button>
+                        </div>
+                        <div class="keyboard-row">
+                            <button class="btn" onclick="letterClick(this, 'a')">a</button>
+                            <button class="btn" onclick="letterClick(this, 's')">s</button>
+                            <button class="btn" onclick="letterClick(this, 'd')">d</button>
+                            <button class="btn" onclick="letterClick(this, 'f')">f</button>
+                            <button class="btn" onclick="letterClick(this, 'g')">g</button>
+                            <button class="btn" onclick="letterClick(this, 'h')">h</button>
+                            <button class="btn" onclick="letterClick(this, 'j')">j</button>
+                            <button class="btn" onclick="letterClick(this, 'k')">k</button>
+                            <button class="btn" onclick="letterClick(this, 'l')">l</button>
+                        </div>
+                        <div class="keyboard-row">
+                            <button class="btn" onclick="letterClick(this, 'z')">z</button>
+                            <button class="btn" onclick="letterClick(this, 'x')">x</button>
+                            <button class="btn" onclick="letterClick(this, 'c')">c</button>
+                            <button class="btn" onclick="letterClick(this, 'v')">v</button>
+                            <button class="btn" onclick="letterClick(this, 'b')">b</button>
+                            <button class="btn" onclick="letterClick(this, 'n')">n</button>
+                            <button class="btn" onclick="letterClick(this, 'm')">m</button>
+                        </div>
+                    </div>
+                    <div>
+                        <!--Event listener on button in script.js-->
+                        <button class="reset-btn">Play Again!</button>
+                    </div>
                 </div>
             </div>
-            <div id="guess-area">
-                <div id="word-hint">
-                <ul id="letter-spaces"></ul>
-                <h3 id="hint"></h3>
-                <button id="showHintButton">Get hint!</button>
-                </div>
-                <div id="keyboard">
-                    <div class="keyboard-row">
-                        <button class="btn" onclick="letterClick(this, 'q')">q</button>
-                        <button class="btn" onclick="letterClick(this, 'w')">w</button>
-                        <button class="btn" onclick="letterClick(this, 'e')">e</button>
-                        <button class="btn" onclick="letterClick(this, 'r')">r</button>
-                        <button class="btn" onclick="letterClick(this, 't')">t</button>
-                        <button class="btn" onclick="letterClick(this, 'y')">y</button>
-                        <button class="btn" onclick="letterClick(this, 'u')">u</button>
-                        <button class="btn" onclick="letterClick(this, 'i')">i</button>
-                        <button class="btn" onclick="letterClick(this, 'o')">o</button>
-                        <button class="btn" onclick="letterClick(this, 'p')">p</button>
-                    </div>
-                    <div class="keyboard-row">
-                        <button class="btn" onclick="letterClick(this, 'a')">a</button>
-                        <button class="btn" onclick="letterClick(this, 's')">s</button>
-                        <button class="btn" onclick="letterClick(this, 'd')">d</button>
-                        <button class="btn" onclick="letterClick(this, 'f')">f</button>
-                        <button class="btn" onclick="letterClick(this, 'g')">g</button>
-                        <button class="btn" onclick="letterClick(this, 'h')">h</button>
-                        <button class="btn" onclick="letterClick(this, 'j')">j</button>
-                        <button class="btn" onclick="letterClick(this, 'k')">k</button>
-                        <button class="btn" onclick="letterClick(this, 'l')">l</button>
-                    </div>
-                    <div class="keyboard-row">
-                        <button class="btn" onclick="letterClick(this, 'z')">z</button>
-                        <button class="btn" onclick="letterClick(this, 'x')">x</button>
-                        <button class="btn" onclick="letterClick(this, 'c')">c</button>
-                        <button class="btn" onclick="letterClick(this, 'v')">v</button>
-                        <button class="btn" onclick="letterClick(this, 'b')">b</button>
-                        <button class="btn" onclick="letterClick(this, 'n')">n</button>
-                        <button class="btn" onclick="letterClick(this, 'm')">m</button>
-                    </div>
-                </div>
-                <div>
-                    <button class="reset-btn">Play Again!</button>
-                </div>
+        </section>
+        <!--Instruction section-->
+        <section id="instructions">
+            <div>
+                <h2>How to Play</h2>
+                <ul>
+                    <li>The blank spaces above each represent a missing letter in the word.</li>
+                    <li>Using the keyboard, you must guess letters to fill each blank space.</li>
+                    <li>As you guess correctly, the letters will populate in their relevant space within the word.</li>
+                    <li>The more letters you guess, the closer you will be to guessing the full word.</li>
+                    <li>Be careful though - as you guess incorrectly, you will lose lives and the hangman will start to
+                        appear!</li>
+                </ul>
             </div>
-        </div>
-    </section>
-    <section id="instructions">
-        <div>
-            <h2>How to Play</h2>
-            <ul>
-                <li>The blank spaces above each represent a missing letter in the word.</li>
-                <li>Using the keyboard, you must guess letters to fill each blank space.</li>
-                <li>As you guess correctly, the letters will populate in their relevant space within the word.</li>
-                <li>The more letters you guess, the closer you will be to guessing the full word.</li>
-                <li>Be careful though - as you guess incorrectly, you will lose lives and the hangman will start to appear!</li>
-            </ul>
-        </div>
-    </section>
+        </section>
     </main>
+    <!--Javascript files - loading word-list.js first as script.js requires it to function-->
     <script src="assets/js/word-list.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
