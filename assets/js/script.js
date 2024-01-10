@@ -2,7 +2,7 @@
 
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
-let maxGuesses = 6;
+const maxGuesses = 6;
 let incorrectLetters = [];
 // Flag to check whether game is over or not - idea found here: https://stackoverflow.com/questions/33722268/disabling-click-counter-function-after-timer-runs-down-to-zero-and-alerts-game
 let gameOver = false;
@@ -23,7 +23,6 @@ let currentHint = currentWordObject.hint;
 document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
 console.log(currentWord);
 console.log(currentWordObject);
-// displayHint();
 
 // Check length of currentWord
 function wordLength(word) {
@@ -39,7 +38,7 @@ function createLetterSpaces(length) {
     letterSpaces.innerHTML = '';
     // Create loop to append list items to the ul with 'letter-spaces'
     for (let i = 0; i < length; i++) {
-        let blankSpace = document.createElement('li');
+        const blankSpace = document.createElement('li');
         blankSpace.textContent = '_';
         blankSpace.className = 'letter';
         letterSpaces.appendChild(blankSpace);
@@ -68,6 +67,7 @@ function checkWord(letter) {
         } 
         }
         if (!letterFound) {
+            // Add to incorrectLetters array in global variables
             incorrectLetters.push(letter);
     }
     return letterFound;
@@ -80,19 +80,24 @@ function letterClick(button, clickedLetter) {
     let letterFound = checkWord(clickedLetter);
 
     if (letterFound) {
-       button.style.backgroundColor = '#6D6D6D';
-       button.disabled = true;
-       console.log('Letter found in the word.');
-       // Pushing used letters to global variable array
-       usedLetters.push(clickedLetter);
-       // Calling winner function
-       winner();
+        // Change button colour so player can see they've already guessed the letter
+        button.style.backgroundColor = '#6D6D6D';
+        // Disabling button so player cannot use it again
+        button.disabled = true;
+        console.log('Letter found in the word.');
+        // Pushing used letters to global variable array
+        usedLetters.push(clickedLetter);
+        // Calling winner function
+        winner();
     } else {
         button.style.backgroundColor = '#6D6D6D';
         button.disabled = true;
         console.log('Letter not found in the word.');
+        // Updating image to add body part due to incorrect guess made
         updateImage();
+        // Incrementing score
         updateGuessbox();
+        // Calling loser function
         loser();
     } 
 }
@@ -104,6 +109,7 @@ function winner() {
     let allCorrect = correctLetters.every(letter => usedLetters.includes(letter)); 
     if (allCorrect) {
         alert("Woohoo! You got it right!");
+        // Prevent player from being able to make more than max guesses
         gameOver = true;
     }
 }
@@ -120,11 +126,6 @@ function loser() {
     }
     }
 
-/**
- * empty global variable arrays, generate new random word, wordlength and 
- * create relevant amount of letter spaces.
- * Return keyboard buttons to original colour
- */
 
 // Event listener for reset
 let resetButton = document.querySelector('.reset-btn');
@@ -132,6 +133,11 @@ resetButton.addEventListener('click', function() {
     resetGame();
 });
 
+/**
+ * empty global variable arrays, generate new random word, wordlength
+ * and create relevant amount of letter spaces. Return keyboard buttons 
+ * to original colour
+ */
 function resetGame() {
     gameOver = false;
     usedLetters = [];
@@ -157,7 +163,7 @@ function resetGame() {
  }
 
  function updateGuessbox() {
-    let score = document.getElementById('incorrect-count');
+    const score = document.getElementById('incorrect-count');
     score.textContent = incorrectLetters.length;
  }
 
@@ -170,7 +176,7 @@ function resetGame() {
  }
 
 function displayHint() {
-        let hintElement = document.getElementById('hint');
+        const hintElement = document.getElementById('hint');
         hintElement.style.display = 'block';
         hintElement.textContent = `Hint: ${currentHint}`;
 }

@@ -64,7 +64,7 @@ const wordList = [
     {word: 'Circle',
     hint: 'A shape.'
     },
-    {word : 'Clocke',
+    {word : 'Clock',
     hint: 'Used for time-telling.'
     },
     {word : 'Clown',
