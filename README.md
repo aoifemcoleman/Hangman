@@ -122,6 +122,37 @@ I would also add different libraries to pull from depending on varying levels of
 I would incorporate modals when a player has either won or lost a game, rather than alerts in a future version of the website, to add visual aspects for the user experience. 
 
 ## Testing
+
+### Responsivity
+
+The website has been tested on multiple devices and browsers, including on Google Chrome, Firefox and Safari, as well as Android and macOS. It has been tested for responsivity using Chrome developer tools, which shows full responsivity.
+
+### Feature testing
+
+#### Word generation
+
+The word generation was set up through the function chooseWord(wordList) and was tested through the use of console.log(currentWord) initially, and then later console.log(currentWordObject) when the word list was set up to pair words and hints. Through the use of the console.log() function I was able to view whether a random word had been generated or not.
+
+#### Updating Hangman Image
+
+The updating hangman image was implemented through the function updateImage(). I tested that the image was indeed loading with each incorrect letter click made by logging "Updating image..." to the console, and replicating losing myself in the browser. There was a bug with the imagePath, as the relative paths of `../images/Hangman${incorrectGuesses}.webp`, `./images/Hangman${incorrectGuesses}.webp` did not load the image. When the path was changed to `assets/images/Hangman${incorrectGuesses}.webp` however, the browser loaded the image. This was tested in the deployed website and there was no issue.
+
+There was another bug which led the alert within the loser() function to appear before the final image of the Hangman. I corrected this through the use of a setTimeout handler to allow the final image time to update before the alert appears.
+
+#### Letter Spaces
+
+The creation of letter spaces was implemented through various functions. 
+
+When the chooseWord function was tested and proven to be pulling a random word from the word List, the function wordLength(word) was created to return the length of the currentWord. This was tested to be correlating correctly, again through the use of console.log(`${currentWordLength}`) and ensuring the number returned was the same as the amount of letters in the corresponding word. This would determine the amount of letter spaces created.
+
+The next function needed to create this feature was createLetterSpaces(length). This function was tested through a combination of viewing the currentWord and currentWordLength variables in the console and manual comparison of the amount of "blank spaces" created on the browser, and confirming that they aligned.
+
+#### Virtual Keyboard
+
+
+#### Hint button
+#### Reset button
+
 ### Accessibility
 
 The website contains alt text, aria-labels and contrasting colours for screen reader use, and received a score of 100% using Lighthouse in Chrome Developer Tools.

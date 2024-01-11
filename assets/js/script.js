@@ -6,6 +6,7 @@ const maxIncorrectGuesses = 6;
 let incorrectLetters = [];
 // Flag to check whether game is over or not - idea found here: https://stackoverflow.com/questions/33722268/disabling-click-counter-function-after-timer-runs-down-to-zero-and-alerts-game
 let gameOver = false;
+const hangmanImage = document.getElementById('hangman-image');
 
  // Setting all buttons to enabled, and then disabling once used. Technique learned from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
  document.querySelectorAll('.btn').forEach(button => {
@@ -21,15 +22,14 @@ let currentWordObject = chooseWord(wordList);
 let currentWord = currentWordObject.word;
 let currentHint = currentWordObject.hint;
 document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
-console.log(currentWord);
-console.log(currentWordObject);
+// console.log(currentWord);
+// console.log(currentWordObject);
 
 // Check length of currentWord
 function wordLength(word) {
     return word.length;
 }
 let currentWordLength = wordLength(currentWord);
-console.log(`${currentWordLength}`);
 
 // Create list of blank spaces using returned word length
 function createLetterSpaces(length) {
@@ -74,7 +74,7 @@ function checkWord(letter) {
  }
 
 function letterClick(button, clickedLetter) {
-    console.log(`Clicked letter: ${clickedLetter}`);
+    // console.log(`Clicked letter: ${clickedLetter}`);
     if (!gameOver) {
     //Call checkWord function with clicked letter
     let letterFound = checkWord(clickedLetter);
@@ -84,7 +84,7 @@ function letterClick(button, clickedLetter) {
         button.style.backgroundColor = '#6D6D6D';
         // Disabling button so player cannot use it again
         button.disabled = true;
-        console.log('Letter found in the word.');
+        // console.log('Letter found in the word.');
         // Pushing used letters to global variable array
         usedLetters.push(clickedLetter);
         // Calling winner function
@@ -92,7 +92,7 @@ function letterClick(button, clickedLetter) {
     } else {
         button.style.backgroundColor = '#6D6D6D';
         button.disabled = true;
-        console.log('Letter not found in the word.');
+        // console.log('Letter not found in the word.');
         // Updating image to add body part due to incorrect guess made
         updateImage();
         // Incrementing score
@@ -168,8 +168,6 @@ function resetGame() {
  }
 
  function updateImage() {
-    console.log("Updating image...");
-    let hangmanImage = document.getElementById('hangman-image');
     let incorrectGuesses = incorrectLetters.length;
     let imagePath = `assets/images/Hangman${incorrectGuesses}.webp`;
     hangmanImage.src = imagePath;
