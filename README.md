@@ -37,6 +37,25 @@ An issue also appeared showing wordList as being an unused variable. However, as
 
 ### Unfixed bugs
 ## Deployment
+The site was deployed to GitHub using the following steps:
+
+1. From the repository page, click on `Settings` in the navbar.
+2. On the left side of the page, in the `Code and Automation` section, select `Pages`.
+3. Under `Build and development`, the source should be set to `Deploy from a branch`.
+4. Under `Branch` select `Main`, then `/root` and press `Save`.
+5. Navigate back to the `<>Code` page in the navbar.
+6. On the right side of the page, under `Deployments` you will see a link to `github-pages`, within which you can click on the expand icon to view the deployed website.
+
+## Running the project locally
+
+### How to clone the project
+
+The site can be cloned from Github using the following steps:
+1. Within the `hangman` respository on Github, click on the 'Code' dropdown menu.
+2. From 'Local', in the HTTPS section, copy the respository link.
+3. Open IDE of choice.
+4. Create a new terminal in your chosen directory, and enter 'git clone' followed by the copied respository link.
+5. A clone of the respository will now be created within your directory.
 
 ## Credits
 
