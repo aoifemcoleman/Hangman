@@ -83,11 +83,17 @@ The words and hints are pulled through the chooseWord(wordList) function, from t
 
 - __Win and lose alerts__
 
+When a player correctly guesses all of the letters in a word, they will get an alert to say "Woohoo! You got it right!" This is implemented through the winner() function in the script.js file.
+
+Likewise, when the player has reached the limit of incorrect guesses, they will receive an alert which states "You lost! :( The correct word was ___"
+
 ![Screenshot of winner desktop alert with "Woohoo! You got it right!" text.](assets/images/winner-alert.webp)
 
-![Screenshot of loser desktop alert with "You lost :( The correct word was x" text.)](assets/images/loser-alert.webp)
+![Screenshot of loser desktop alert with "You lost! :( The correct word was ___" text.)](assets/images/loser-alert.webp)
 
 - __Reset button__
+
+A reset button is featured beneath the keyboard, with the text "Play Again!" This button allows the player to reset the game at any time, and will issue a new word and corresponding hint to the player. It is implemented within the js.script file through the resetGame() function.
 
 ![Screenshot of reset button with "Play Again!" text](assets/images/reset-button.webp)
 
@@ -134,8 +140,8 @@ The site was deployed to GitHub using the following steps:
 ### How to clone the project
 
 The site can be cloned from Github using the following steps:
-1. Within the `hangman` respository on Github, click on the 'Code' dropdown menu.
-2. From 'Local', in the HTTPS section, copy the respository link.
+1. Within the `hangman` respository on Github, click on the `Code` dropdown menu.
+2. From `Local`, in the `HTTPS` section, copy the respository link.
 3. Open IDE of choice.
 4. Create a new terminal in your chosen directory, and enter 'git clone' followed by the copied respository link.
 5. A clone of the respository will now be created within your directory.
