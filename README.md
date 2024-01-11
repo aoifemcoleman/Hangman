@@ -12,9 +12,13 @@ As a player, I want to:
 
 - __Favicon__
 
+The website features a favicon with the initial "H" in the same font style and colour combination as the website's header. This favicon was selected so that it will be easily identifiable for players of the game.
+
 ![Screenshot of favicon](assets/images/favicon.webp)
 
 - __Header__
+
+The header includes a heading with the website title "Hangman" in black against a white background. The font style used is "Lacquer" and is distinctive against the plain white background.
 
 - _Desktop view_
 
@@ -25,6 +29,8 @@ As a player, I want to:
 ![Screenshot of header in mobile view](assets/images/header-mobile.webp)
 
 - __Game Area__
+
+The game area contains all the essential elements of the traditional Hangman game, with a "skeleton" image of the gallows, that updates with body parts as players guess letters incorrectly, and a guess area with blank spaces relative to the amount of letters in the randomly generated word. It also contains a tally of incorrect guesses made, a virtual keyboard, a hint button and a reset button.
 
 - _Desktop view_
 
@@ -38,21 +44,40 @@ As a player, I want to:
 
 - __Updating gallows image__
 
+Within the game area, when the player initially loads the page an image of empty gallows is visible. This image updates dynamically using Javascript functions as the player clicks on letters not available in the current randomly generated word, up to a maximum of 6 incorrect guesses. The image updates 6 times, from an empty gallows to a gallows with a head, up to a gallows with a head, body, left and right legs and left and right arms. The final image is of a complete hanged man. The player can therefore see as they progress closer and closer towards losing the game.
+
+The image is updated using the function updateImage() within the script.js file, using a template literal to dynamically update the image from a series of hangman images with the assets images folder as users make incorrect guesses.
+
 ![Screenshot of updating gallows](assets/images/updating-gallows.webp)
 
-- __Incorrect Guesses tally__
+- __Incorrect Guesses Counter__
+
+To ensure the player is fully aware of the amount of incorrect guesses made, and the limit of incorrect guesses that can be made before defeat, an incorrect guess counter also features on the web page, below the updating gallows image. 
+
+The player sees that they have a maximum of 6 incorrect guesses, which correlates with the 6 body parts that update in the image. This counter is updated using the function updateGuessebox() within the script.js file.
 
 
+- __Blank Letter Spaces__
 
-- __Blank letter spaces__
+Within the game area, is a guess area which features all the elements needed for players of the game to make their guesses. One of these elements is a list of blank letter spaces, relative to the number of missing letters in the randomly generated word. As the player clicks on letters available in the hidden word, the letters replace the blank spaces in their relevant position.
 
 ![Screenshot of blank letter spaces](assets/images/letter-spaces.webp)
 
-- __Virtual keyboard__
+- __Virtual Keyboard__
+
+Beneath the blank letter spaces, is a virtual keyboard. The virtual keyboard contains 26 letter keys, which players can click through as they make guesses to complete the hidden word. 
+
+When a letter button has been clicked, the button cannot be reclicked, and changes colour to make it obvious to the player that the letter has already been guessed. This applies whether a letter was guessed correctly or incorrectly. These features are handled with an "on-click" attribute on each button within the index.html file, which executes the function letterClick() in the script.js file. This function changes the button's colour, disables the button and pushes the clicked letters into a usedLetters array, as well as updating the image and incorrect guesses counter.
 
 ![Screenshot of virtual keyboard, with greyed out used letters](assets/images/vritual-keyboard.webp)
 
-- __Hint feature__
+- __Hint Feature__
+
+The game area also includes a hint button beneath the blank letter spaces. This way, the player can choose whether or not to select to use a hint to guess the word. 
+
+Once the button is clicked, a hint appears above it, to assist the player in guessing the correct word.
+
+The words and hints are pulled through the chooseWord(wordList) function, from the wordList.js file which contains a list of random words and their corresponding hints. This feature is then implemented by using the style.css file to set the display for the hint to none, and toggling through the displayHint function within the script.js file.
 
 ![Screenshot of hint button and example of hint.](assets/images/hint-button.webp)
 
