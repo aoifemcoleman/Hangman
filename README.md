@@ -9,6 +9,64 @@ As a player, I want to:
 [View the live deployed website here](https://aoifemcoleman.github.io/Hangman/)
 ## Features
 ### Existing Features
+
+- __Favicon__
+
+![Screenshot of favicon](assets/images/favicon.webp)
+
+- __Header__
+
+- _Desktop view_
+
+![Screenshot of header in desktop view](assets/images/header-desktop.webp)
+
+- _Mobile view_
+
+![Screenshot of header in mobile view](assets/images/header-mobile.webp)
+
+- __Game Area__
+
+- _Desktop view_
+
+![Screenshot of game area in desktop view](assets/images/game-area-desktop.webp)
+
+- _Mobile view_
+
+![Screenshot of first section of game area in mobile view](assets/images/game-area1-mobile.webp)
+
+![Screenshot of second section of game area in mobile view](assets/images/game-area2-mobile.webp)
+
+- __Updating gallows image__
+
+![Screenshot of updating gallows](assets/images/updating-gallows.webp)
+
+- __Incorrect Guesses tally__
+
+
+
+- __Blank letter spaces__
+
+![Screenshot of blank letter spaces](assets/images/letter-spaces.webp)
+
+- __Virtual keyboard__
+
+![Screenshot of virtual keyboard, with greyed out used letters](assets/images/vritual-keyboard.webp)
+
+- __Hint feature__
+
+![Screenshot of hint button and example of hint.](assets/images/hint-button.webp)
+
+- __Win and lose alerts__
+
+![Screenshot of winner desktop alert with "Woohoo! You got it right!" text.](assets/images/winner-alert.webp)
+
+![Screenshot of loser desktop alert with "You lost :( The correct word was x" text.)](assets/images/loser-alert.webp)
+
+- __Reset button__
+
+![Screenshot of reset button with "Play Again!" text](assets/images/reset-button.webp)
+
+
 ### Features left to implement
 ## Testing
 ### Accessibility
