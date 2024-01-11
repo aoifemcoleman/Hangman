@@ -183,7 +183,28 @@ The site can be cloned from Github using the following steps:
 
 ## Credits
 
-https://favicon.io/favicon-generator/ for Favicon
-Microsoft Paint for Hangman drawings
-Google fonts
-https://members.optusnet.com.au/~charles57/Creative/Techniques/random_words.htm random word list
+### Content
+- The words in the wordList in word-list.js were taken from [here](https://members.optusnet.com.au/~charles57/Creative/Techniques/random_words.htm) and modified.
+- Idea for using a wordList with words and hints to separate concerns came from [here](https://www.codingnepalweb.com/build-hangman-game-html-javascript/), as well as inspiration for creating an on-screen keyboard
+- Idea for including instructions section found [here](https://thewordsearch.com/hangman/).
+- I imported my fonts from [Google Fonts](https://fonts.google.com/).
+
+### Media
+- The Favicon was created using this [favicon generator](https://favicon.io/favicon-generator/).
+- The hangman image was created using the Microsoft Paint programme.
+
+### Code
+- Idea for setting up "gameOver = false" flag found on [Stack Overflow](https://stackoverflow.com/questions/33722268/disabling-click-counter-function-after-timer-runs-down-to-zero-and-alerts-game).
+- Idea and code for disabling keyboard buttons taken from [here](https://www.codingnepalweb.com/build-hangman-game-html-javascript/).
+- Learned how to set strings to lower or upper case on [W3 Schools](https://www.w3schools.com/jsref/jsref_tolowercase.asp).
+- Learned about every() method for use in winner function [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).
+- Idea for setting a variable of maxIncorrectGuesses taken from [here](https://www.codingnepalweb.com/build-hangman-game-html-javascript/) and modified.
+- Idea for using setTimeout to delay alert to allow final hangman image update to appear found [here](https://forum.freecodecamp.org/t/how-to-make-js-wait-until-dom-is-updated/122067) and modified.
+- Learned about using querySelector() on [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector).
+- Code for creation of virtual keyboard taken from this [Youtube tutorial](https://www.youtube.com/watch?v=K7I0SJ86NvE) and modified.
+
+## Acknowledgements
+
+I would like to sincerely thank my mentor, Ronan McClelland for his support, consistent great ideas as well as patience while guiding me through my project. 
+
+I would also like to thank Code Institute tutor support for helping me identify bugs in seconds, that I had been looking at for hours! And for their constant patience and helpful attitudes.

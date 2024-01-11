@@ -2,7 +2,7 @@
 
 // Creating global variable to store clicked keyboard buttons
 let usedLetters = [];
-const maxGuesses = 6;
+const maxIncorrectGuesses = 6;
 let incorrectLetters = [];
 // Flag to check whether game is over or not - idea found here: https://stackoverflow.com/questions/33722268/disabling-click-counter-function-after-timer-runs-down-to-zero-and-alerts-game
 let gameOver = false;
@@ -116,7 +116,7 @@ function winner() {
 
 function loser() {
     // idea for code modified from here: https://www.codingnepalweb.com/build-hangman-game-html-javascript/
-    if (incorrectLetters.length >= maxGuesses) {
+    if (incorrectLetters.length >= maxIncorrectGuesses) {
         updateImage();
         //learned about method here, to allow image time to update: https://forum.freecodecamp.org/t/how-to-make-js-wait-until-dom-is-updated/122067
         setTimeout(function() {
