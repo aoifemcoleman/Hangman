@@ -101,7 +101,7 @@ A reset button is featured beneath the keyboard, with the text "Play Again!" Thi
 ### Features left to implement
 
 #### Word Categories
-In future versions of the website, I would add libraries of different word categories for players to choose from, ie Animals, Food, Cities etc. This would allow a user to test their knowledge in different areas, and rely less on hints. 
+In future versions of the website, I would add libraries of different word categories for players to choose from, eg. Animals, Food, Cities etc. This would allow a user to test their knowledge in different areas, and possible reduce use of hints. 
 
 #### Levels of difficulty
 
@@ -112,6 +112,9 @@ I would incorporate modals when a player has either won or lost a game, rather t
 
 ## Testing
 ### Accessibility
+
+The website contains alt text, aria-labels and contrasting colours for screen reader use, and received a score of 100% using Lighthouse in Chrome Developer Tools.
+
 ![Lighthouse accessibility score](assets/images/accessibility-score.webp)
 ### Validator testing
 #### HTML:
