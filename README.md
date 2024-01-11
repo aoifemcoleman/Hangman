@@ -1,10 +1,21 @@
 # Hangman
 ![Screenshot of website responsivity, taken from https://ui.dev/amiresponsive](assets/images/responsivity.webp)
+
 ## Purpose
 The purpose of this website is to provide an easy-to-use digital version of the traditional game of Hangman, available on-the-go and requiring no further players or materials.
+
+This website is built using HTML, CSS and Javascript. 
+
+I chose to recreate this game for my portfolio project as I have always enjoyed this fun but challenging game, and knew that it would be a great learning opportunity for Javascript! 
+
 ### User Stories
 As a player, I want to:
-- [perform some task] so that I can [achieve some goal]".
+- Test my vocabulary and guessing abilities through a fun and challenging game.
+- Submit my guesses in an easy and comfortable manner, through the use of an on-screen keyboard which will update to disable letters buttons I have already clicked.
+- View my progress as I make correct guesses so that I know the positions of each correctly guessed letter in the hidden word and can get closer to winning.
+- See a hint if I need assistance to guess the correct word.
+- Receive updates on how many chances/guesses I have left so that I can decide whether to click to get a hint or not.
+- Be able to easily reset the game to play again, whether that is after winning or losing, or whether I would simply like a new random word to be generated.
 
 [View the live deployed website here](https://aoifemcoleman.github.io/Hangman/)
 ## Features
