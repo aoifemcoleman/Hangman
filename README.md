@@ -130,7 +130,17 @@ The style.css file was passed through the official [Jigsaw validator](https://ji
 
 ##### script.js:
 
-Several issues were initially identified when the script.js file was passed through the official [Jshint validator](https://jshint.com/), which were due to it not being declared that the js file was operating with ES6. A comment was added to the js file to advise that esversion 6 is being used, which removed the majority of issues.
+Several issues were initially identified when the script.js file was passed through the official [Jshint validator](https://jshint.com/), which were due to it not being declared that the js file was operating with ES6. A comment was added to the js file to advise that esversion 6 is being used, which removed the gross majority of issues.
+
+The validator showed that there was one undefined variable and one unused variable. The undefined variable was `wordList` and this was flagged due to the validator not having access to the wordList.js file simultaneously, and therefore not recognising it as a variable.
+The unused variable was identified as `letterClick`. This is due to the fact that this function is not being invoked within the script.js file, however as it is being invoked through the `on-click` attribute with the keyboard buttons in the index.html file, no further actions needed to be taken.
+
+The following metrics were also returned:
+
+- There are 16 functions in this file.
+- Function with the largest signature take 2 arguments, while the median is 0.5.
+- Largest function has 17 statements in it, while the median is 2.5.
+- The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 ##### word-list.js:
 
