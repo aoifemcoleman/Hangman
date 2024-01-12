@@ -22,8 +22,6 @@ let currentWordObject = chooseWord(wordList);
 let currentWord = currentWordObject.word;
 let currentHint = currentWordObject.hint;
 document.querySelector('#hint').textContent = `Hint: ${currentHint}`;
-// console.log(currentWord);
-// console.log(currentWordObject);
 
 // Check length of currentWord
 function wordLength(word) {
@@ -74,7 +72,6 @@ function checkWord(letter) {
  }
 
 function letterClick(button, clickedLetter) {
-    // console.log(`Clicked letter: ${clickedLetter}`);
     if (!gameOver) {
     //Call checkWord function with clicked letter
     let letterFound = checkWord(clickedLetter);
@@ -84,7 +81,6 @@ function letterClick(button, clickedLetter) {
         button.style.backgroundColor = '#6D6D6D';
         // Disabling button so player cannot use it again
         button.disabled = true;
-        // console.log('Letter found in the word.');
         // Pushing used letters to global variable array
         usedLetters.push(clickedLetter);
         // Calling winner function
@@ -92,7 +88,6 @@ function letterClick(button, clickedLetter) {
     } else {
         button.style.backgroundColor = '#6D6D6D';
         button.disabled = true;
-        // console.log('Letter not found in the word.');
         // Updating image to add body part due to incorrect guess made
         updateImage();
         // Incrementing score
@@ -136,7 +131,7 @@ resetButton.addEventListener('click', function() {
 /**
  * empty global variable arrays, generate new random word, wordlength
  * and create relevant amount of letter spaces. Return keyboard buttons 
- * to original colour
+ * to original colour, update hangman image and reset incorrect guesses.
  */
 function resetGame() {
     gameOver = false;
@@ -161,21 +156,23 @@ function resetGame() {
     hangmanImage.src = imagePath;
     updateGuessbox();
  }
-
+// Using template literal to update score/guessbox relative to number of incorrect guesses made
  function updateGuessbox() {
     const score = document.getElementById('incorrect-count');
     score.textContent = incorrectLetters.length;
  }
 
+ // Using template literal to update image relative to number of incorrect guesses made
  function updateImage() {
     let incorrectGuesses = incorrectLetters.length;
     let imagePath = `assets/images/Hangman${incorrectGuesses}.webp`;
     hangmanImage.src = imagePath;
  }
 
+// Toggling hint h3 from display: none; as set in style.css to display: block; 
 function displayHint() {
         const hintElement = document.getElementById('hint');
         hintElement.style.display = 'block';
         hintElement.textContent = `Hint: ${currentHint}`;
-}
+} // Adding event listener for click
     document.getElementById('showHintButton').addEventListener('click', displayHint);
