@@ -64,9 +64,8 @@ h2 {
 }
 
 #showHintButton {
-    font-size: 1em;
     margin-block: 1em;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 700;
     font-family: sans-serif;
     background-color: black;
@@ -110,7 +109,7 @@ h2 {
 
  /* Reset button */
  .reset-btn {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 700;
     font-family: sans-serif;
     background-color: black;
