@@ -4,7 +4,7 @@
 ## Purpose
 The purpose of this website is to provide an easy-to-use digital version of the traditional game of Hangman, available on-the-go and requiring no further players or materials.
 
-This website is built using HTML, CSS and Javascript. 
+This website is built using HTML, CSS and Javascript. [The live deployed website can be viewed here](https://aoifemcoleman.github.io/Hangman/).
 
 I chose to recreate this game for my portfolio project as I have always enjoyed this fun but challenging game, and knew that it would be a great learning opportunity for Javascript! 
 
@@ -17,7 +17,6 @@ As a player, I want to:
 - Receive updates on how many chances/guesses I have left so that I can decide whether to click to get a hint or not.
 - Be able to easily reset the game to play again, whether that is after winning or losing, or whether I would simply like a new random word to be generated.
 
-[View the live deployed website here](https://aoifemcoleman.github.io/Hangman/)
 ## Features
 ### Existing Features
 
@@ -61,11 +60,11 @@ The image is updated using the function updateImage() within the script.js file,
 
 ![Screenshot of updating gallows](assets/images/updating-gallows.webp)
 
-- __Incorrect Guesses Counter__
+- __Incorrect Guess Box__
 
-To ensure the player is fully aware of the amount of incorrect guesses made, and the limit of incorrect guesses that can be made before defeat, an incorrect guess counter also features on the web page, below the updating gallows image. 
+To ensure the player is fully aware of the amount of incorrect guesses made, and the limit of incorrect guesses that can be made before defeat, an incorrect guess tally also features on the web page, below the updating gallows image. 
 
-The player sees that they have a maximum of 6 incorrect guesses, which correlates with the 6 body parts that update in the image. This counter is updated using the function updateGuessebox() within the script.js file.
+The player sees that they have a maximum of 6 incorrect guesses, which correlates with the 6 body parts that update in the image. This tally is updated using the function updateGuessebox() within the script.js file.
 
 
 - __Blank Letter Spaces__
@@ -78,7 +77,7 @@ Within the game area, is a guess area which features all the elements needed for
 
 Beneath the blank letter spaces, is a virtual keyboard. The virtual keyboard contains 26 letter keys, which players can click through as they make guesses to complete the hidden word. 
 
-When a letter button has been clicked, the button cannot be reclicked, and changes colour to make it obvious to the player that the letter has already been guessed. This applies whether a letter was guessed correctly or incorrectly. These features are handled with an "on-click" attribute on each button within the index.html file, which executes the function letterClick() in the script.js file. This function changes the button's colour, disables the button and pushes the clicked letters into a usedLetters array, as well as updating the image and incorrect guesses counter.
+When a letter button has been clicked, the button cannot be reclicked, and changes colour to make it obvious to the player that the letter has already been guessed. This applies whether a letter was guessed correctly or incorrectly. These features are handled with an "on-click" attribute on each button within the index.html file, which executes the function letterClick() in the script.js file. This function changes the button's colour, disables the button and pushes the clicked letters into a usedLetters array, as well as updating the image and incorrect guesses tally.
 
 ![Screenshot of virtual keyboard, with greyed out used letters](assets/images/vritual-keyboard.webp)
 
@@ -168,6 +167,15 @@ The reset button was tested by viewing and replicating the changes appearing in 
 #### Incorrect Guess Box - Incrementation
 
 This feature was applied using the incorrectLetters array and tested through replication, ensuring that the tally updated along with the hangman image.
+
+#### Winner Alert
+
+The winner() function facilitates the alert by splitting the currentWord into an array of letters and checking that each of these letters is included in the usedLetters array. Initially there was a bug occurring in the checkWord(letter) function due to case sensitivity, as the keyboard only produced lower case letters, and the wordList contained capitalised words. Therefore, upon a player guessing all the letters correctly, the winner() function would not be called as the lower case first letter was not being accepted. However, this bug was resolved by setting each letter to lowercase. 
+
+#### Loser Alert
+
+The loser() function was tested by ensuring that upon the player making six incorrect guesses, an alert would appear to advise that they had lost, the image would update to the final hanged man image and the guessbox would advise the player of having made 6/6 incorrect guesses. As mentioned previously, the alert was appearing before the final hangman image appeared which would affect the user experience, so a setTimeout handler was added to delay the appearance of the alert.
+
 
 ### Accessibility
 
