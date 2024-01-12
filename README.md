@@ -149,9 +149,25 @@ The next function needed to create this feature was createLetterSpaces(length). 
 
 #### Virtual Keyboard
 
+This element was statically created through HTML and CSS, and an on-click attribute was invoked through Javascript through a variety of functions and methods, namely the letterClick and checkWord(letter) functions. 
+
+The letterClick(button, clickedLetter) function was initially tested through replication of clicking the buttons and noting that their background colour updated when they had been clicked. Later a disable button method was added to further confirm a player could no longer re-click the same button. 
+
+The checkWord(letter) function iterates through the currentWord array to check if it contains the letter in question, and then replaces the corresponding blank space in the array with the letter. This was again tested to be functioning as intended through the console messages and ensuring the generated word listed there and the replaced blank space were in agreement.
+
+An empty array for usedLetters was declared, for all clicked letters to be pushed to. This was tested to be working later in the winner() function.
 
 #### Hint button
+
+The hint button was set up through the function displayHint(), as well as creating new currentWord variables to include currentWordObject and currentHint. These variables were tested through the use of console.log() and manual tests of the button and appearing hints, to confirm the words and corresponding hints in the console were in alignment and that this also reflected in the browser. 
+
 #### Reset button
+
+The reset button was tested by viewing and replicating the changes appearing in the browser when clicked, and ensuring all elements had reset to their original state. Initially the keyboard buttons did not revert to their original colour, so a loop was created within the resetGame() function to iterate through each button and change their colour back to the original light grey.
+
+#### Incorrect Guess Box - Incrementation
+
+This feature was applied using the incorrectLetters array and tested through replication, ensuring that the tally updated along with the hangman image.
 
 ### Accessibility
 
